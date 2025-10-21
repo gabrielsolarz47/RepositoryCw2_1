@@ -17,6 +17,9 @@
   })
 
   cw1.addEventListener("click", function() {
+    let p = document.createElement('p');
+    p.innerHTML = "Loading...";
+    answer.appendChild(p);
     fetch('https://jsonplaceholder.typicode.com/posts', { method: 'GET' })
       .then(response => response.json())
       .then(data => {
